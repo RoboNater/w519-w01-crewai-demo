@@ -132,8 +132,9 @@ task = Task(
 # ============================================================
 
 crew = Crew(
-    agents=[manager, researcher, writer],
+    agents=[researcher, writer],
     tasks=[task],
+    manager_agent=manager,
     process=Process.hierarchical,
     verbose=True,
 )
@@ -152,4 +153,3 @@ if __name__ == "__main__":
 
     except Exception as e:
         logger.error(f"Execution stopped: {e}")
-        
